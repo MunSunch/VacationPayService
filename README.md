@@ -46,5 +46,5 @@ docker compose up
 Расчет
 ![Расчет](img/calculate200.png)
 
-Ошибка валидации DTO
+Ошибка валидации
 ![Ошибка валидации](img/error_validation_dto400.png)
