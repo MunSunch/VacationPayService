@@ -1,0 +1,71 @@
+openapi: 3.0.1
+info:
+  title: Vacation pay service
+  description: Service for calculating vacation pay
+  contact:
+    name: Munir Sunchalyaev
+    url: https://t.me/score_msConfig021
+  version: "1.0"
+servers:
+- url: http://localhost:8080/api/v1/vacation
+  description: Generated server url
+tags:
+- name: Vacation Pay Controller
+  description: allows you to calculate vacation pay
+paths:
+  /calculate:
+    get:
+      tags:
+      - Vacation Pay Controller
+      summary: calculation of vacation pay
+      operationId: calculateSalary
+      parameters:
+      - name: salary
+        in: header
+        description: average salary for 12 months
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: countDays
+        in: header
+        description: number of vacation days
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "400":
+          description: Invalid format
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDtoOut'
+        "200":
+          description: Calculated amount
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VacationPayDtoOut'
+        "500":
+          description: Server's error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDtoOut'
+components:
+  schemas:
+    ErrorDtoOut:
+      type: object
+      properties:
+        message:
+          type: string
+          description: error message
+      description: Error
+    VacationPayDtoOut:
+      type: object
+      properties:
+        vacationPay:
+          type: string
+          description: calculated amount
+      description: Vacation pay calculation results

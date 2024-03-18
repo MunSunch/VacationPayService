@@ -5,3 +5,7 @@ spring:
 server:
   servlet:
     context-path: /api/v1/vacation
+
+springdoc:
+  api-docs:
+    path: /api-docs

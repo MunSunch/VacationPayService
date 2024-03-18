@@ -14,6 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.springframework.boot.spring.version>2.7.18</org.springframework.boot.spring.version>
         <org.projectlombok.lombok.version>1.18.30</org.projectlombok.lombok.version>
+        <org.springdoc.springdoc-openapi-ui.version>1.6.14</org.springdoc.springdoc-openapi-ui.version>
+        <io.swagger.core.v3.swagger-annotations.version>2.2.8</io.swagger.core.v3.swagger-annotations.version>
     </properties>
 
     <dependencies>
@@ -42,6 +44,16 @@
             <artifactId>lombok</artifactId>
             <version>${org.projectlombok.lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${io.swagger.core.v3.swagger-annotations.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${org.springdoc.springdoc-openapi-ui.version}</version>
         </dependency>
     </dependencies>
 

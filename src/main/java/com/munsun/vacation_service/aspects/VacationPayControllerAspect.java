@@ -20,7 +20,7 @@ public class VacationPayControllerAspect {
     @Pointcut("within(com.munsun.vacation_service.controllers.VacationPayController)")
     private void inVacationPayControllerClass() {}
 
-    @Before("inVacationPayControllerClass() & executionMethods() ")
+    @Before("inVacationPayControllerClass() & executionMethods()")
     public void loggingEndpoint(JoinPoint point) throws Throwable {
         var signature = point.getSignature().toShortString();
         var args = Arrays.stream(point.getArgs())

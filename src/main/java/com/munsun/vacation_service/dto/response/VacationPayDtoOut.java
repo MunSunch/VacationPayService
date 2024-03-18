@@ -1,10 +1,13 @@
 package com.munsun.vacation_service.dto.response;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
+@AllArgsConstructor
+@Schema(description = "Vacation pay calculation results")
 public class VacationPayDtoOut {
-    String vacationPay;
+    @Schema(description = "calculated amount")
+    private String vacationPay;
 }
