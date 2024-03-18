@@ -19,6 +19,8 @@
 
 Написаны модульные тесты, однако только для проверки правильности расчетов.
 
+Вся документация по API приведена в [api-docs](api-docs.yaml).
+
 ## Запуск
 Подготовка: установить [Maven](https://maven.apache.org/download.cgi) 
 и в зависимости от способа запуска [Docker](https://www.docker.com/products/docker-desktop/) 
