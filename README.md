@@ -47,8 +47,14 @@ java -jar target/VacationPayService.jar
 ```
 docker compose up
 ```
-
 ## Примеры запуска
+Расчет
+![Расчет](img/Calculate_client.png)
+
+Ошибка валидации
+![Ошибка валидации](img/Error_validation_client.png)
+
+## Примеры запуска без клиента
 Расчет
 ![Расчет](img/calculate200.png)
 
